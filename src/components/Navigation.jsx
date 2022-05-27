@@ -7,8 +7,6 @@ export function Navigation() {
     return (
         <StyledList>
             <StyledListItem><Link to={ROUTES.USERS}>Users</Link></StyledListItem>
-            <StyledListItem><Link to={ROUTES.USER}>User</Link></StyledListItem>
-            <StyledListItem><Link to={ROUTES.POST}>Post</Link></StyledListItem>
             <StyledListItem><Link to={ROUTES.POSTS}>Posts</Link></StyledListItem>
         </StyledList>
     )

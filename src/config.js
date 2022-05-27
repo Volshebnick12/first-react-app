@@ -4,6 +4,7 @@ export default {
     paths: {
       users: "/users",
       posts: "/posts",
+      comments: "/comments"
     }
   }, 
 }
