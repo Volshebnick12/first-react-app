@@ -24,8 +24,8 @@ export function User() {
 
     return (
         <Layout>
-            <h1>User</h1>
-            <UserProfile user={user} />
+           <UserProfile user={user} />
+           <h2>Посты</h2>
             <UserPosts posts={posts} />
         </Layout>
     )

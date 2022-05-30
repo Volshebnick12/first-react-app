@@ -15,7 +15,7 @@ export function Users() {
 
     return (
         <Layout>
-            <h1>Users</h1>
+            <h1>Пользователи:</h1>
             <UsersList users={users} />
         </Layout>
     )
