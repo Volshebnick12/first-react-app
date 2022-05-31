@@ -1,6 +1,7 @@
 export const ROUTES = {
     POST: "/post/:id",
-    POSTS: "/posts",
+    // POST: "/user/:id/posts/:pid",
+    // POSTS: "/user/:id/posts",
     USER: "/user/:id",
     USERS: "/"
 };

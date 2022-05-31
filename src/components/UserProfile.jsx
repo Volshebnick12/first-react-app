@@ -1,52 +1,54 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-export function UserProfile({user}) {
-    console.log('UserProfile', user)
+export function UserProfile({ user }) {
     return (
         <div>
-            <UserName>{user.name}</UserName>
-                <UserContact>
-                    <UserEmail>{user.email}</UserEmail>
-                    <UserPhone>{user.phone}</UserPhone>
-                    <UserWebsite>{user.website}</UserWebsite>
-                </UserContact>
+            <UserName>{ user.name }</UserName>
+            <UserContact>
+                <UserEmail>Email: { user.email }</UserEmail>
+                <UserPhone>Phone: { user.phone }</UserPhone>
+                <UserWebsite>Website: { user.website }</UserWebsite>
+            </UserContact>
         </div>
-    )
+    );
 }
 
+UserProfile.propTypes = {
+    user: PropTypes.object.isRequired
+};
+
 const UserName = styled.div`
-    display: flex;
-    margin: 10px;
-    padding: 10px 10px 10px;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 35px;
-    color:black;
-    Weight: 500;
-    line-height: 40px;
-    border: 1px solid black;
-`
+  display: flex;
+  padding: 10px 0 10px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 35px;
+  color: black;
+  weight: 500;
+  line-height: 40px;
+  
+`;
 
 const UserContact = styled.div`
-    margin-left: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: black;
-    Weight: 400;
-    line-height: 17px;
-`
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: black;
+  weight: 400;
+  line-height: 17px;
+`;
+
 const UserEmail = styled.div`
-    display: inline;
-    border: 1px solid black;
-    padding: 10px 40px;
-`
+  padding: 10px 0;
+  flex: 1 1 auto;
+`;
+
 const UserPhone = styled.div`
-    display: inline;
-    border: 1px solid black;
-    padding: 10px 40px;
-`
+  padding: 10px 0;
+  flex: 1 1 auto;
+`;
+
 const UserWebsite = styled.div`
-    display: inline;
-    border: 1px solid black;
-    padding: 10px 40px;
-`
+  padding: 10px 0;
+  flex: 1 1 auto;
+`;

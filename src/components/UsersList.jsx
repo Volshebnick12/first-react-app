@@ -1,13 +1,17 @@
 import React from "react";
-import {UsersListItem} from './UsersListItem'
+import { UsersListItem } from "./UsersListItem";
+import PropTypes from "prop-types";
 
-export function UsersList({users}) {
-  console.log('UsersList', users)
-  return (
-    <ul>
-      {users.map((user) => (
-        <UsersListItem user={user} key={user.id} />
-      ))}  
-    </ul>
-  )
-} 
+export function UsersList({ users }) {
+    return (
+        <>
+            { users.map((user) => (
+                <UsersListItem user={ user } key={ user.id } />
+            )) }
+        </>
+    );
+}
+
+UsersList.propTypes = {
+    users: PropTypes.array.isRequired
+};

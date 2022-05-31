@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
 import { UsersList } from "../components/UsersList";
-import { getAllUsers } from "../utils"
+import { getAllUsers } from "../utils";
 
 export function Users() {
-    const [users, setUsers] = useState([])
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         getAllUsers()
-            .then(({data}) => {
-                setUsers(data)
-            })
-    }, [])
+            .then(({ data }) => {
+                setUsers(data);
+            });
+    }, []);
 
     return (
         <Layout>
             <h1>Пользователи:</h1>
-            <UsersList users={users} />
+            <UsersList users={ users } />
         </Layout>
-    )
-} 
+    );
+}

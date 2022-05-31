@@ -6,27 +6,27 @@ import { PostDetails } from "../components/PostDetails";
 import { getAllCommentsByPostId, getPostById } from "../utils";
 
 export function Post() {
-    const [post, setPost] = useState({})
-    const [comments, setComments] = useState([])
+    const [post, setPost] = useState({});
+    const [comments, setComments] = useState([]);
 
     let { id } = useParams();
 
     useEffect(() => {
         getPostById(id)
-            .then(({data}) => {
-                setPost(data)
-            })
+            .then(({ data }) => {
+                setPost(data);
+            });
         getAllCommentsByPostId(id)
-            .then(({data}) => {
-                setComments(data)
-            })
-    }, [])
+            .then(({ data }) => {
+                setComments(data);
+            });
+    }, [id]);
 
     return (
         <Layout>
-            <h1>Post</h1>
-            <PostDetails post={post} />
-            <PostComments comments={comments} />
+            <h1>Пост</h1>
+            <PostDetails post={ post } />
+            <PostComments comments={ comments } />
         </Layout>
-    )
+    );
 } 
