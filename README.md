@@ -1,5 +1,7 @@
 # Клуб - социальная сеть (маленький проект на React)
 
+# Проект можно посмотреть здесь: [https://club-site.netlify.app](https://club-site.netlify.app)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
